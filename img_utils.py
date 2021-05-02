@@ -1,6 +1,7 @@
 import datetime
 import os
 import random
+import uuid
 
 from PIL import Image, ImageFont, ImageDraw, ImageEnhance
 
@@ -9,7 +10,8 @@ def create_quote_img(quote, logger):
     logger.info('creating quote img')
 
     today = datetime.datetime.now()
-    today_str = today.strftime('%Y%m%d')
+    today_str = today.strftime('%Y%m%d%H')
+    extended_today_str = today.strftime('%Y%m%d | %H')
 
     try:
         logger.info('retrieving imgs folder path from settings')
@@ -31,7 +33,8 @@ def create_quote_img(quote, logger):
     darken_img(background_path, resulting_img_path)
 
     text_color = (255, 255, 255)
-    write_title(today_str, resulting_img_path, text_color, logger)
+
+    write_title(extended_today_str, resulting_img_path, text_color, logger)
     write_quote(quote, resulting_img_path, text_color, logger)
     write_footer(resulting_img_path, text_color, logger)
 

@@ -1,0 +1,10 @@
+# App settings
+LOGS_FOLDER_PATH = 'logs'
+APP_NAME = 'random-lovely-quote'
+IMGS_FOLDER = 'img'
+
+# Twitter settings
+TWITTER_CONSUMER_KEY = 'flaksdfhlaskjdfh'
+TWITTER_CONSUMER_SECRET = 'mnwbervmqwnbev'
+TWITTER_ACCESS_TOKEN = 'asldfkjasñldfjk'
+TWITTER_ACCESS_TOKEN_SECRET = 'qwpoeriueqwpoeriu'
