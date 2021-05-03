@@ -53,11 +53,11 @@ def tweet_quote(img_path, quote, logger):
     twitter_credentials = get_twitter_credentials(logger)
     twitter_api = twitter_login(twitter_credentials, logger)
 
-    hashtags = '\n#inpirational\n#inspirationalquotes'
+    hashtags = '\n#inpirational\n#inspirationaladvice'
 
     tweet_text = quote + hashtags
 
-    # twitter_api.update_with_media(img_path, status=tweet_text)
+    twitter_api.update_with_media(img_path, status=tweet_text)
     logger.info(tweet_text)
     logger.info('quote img: ' + img_path)
 
