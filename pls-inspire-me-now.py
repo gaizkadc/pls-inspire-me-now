@@ -6,7 +6,7 @@ import img_utils
 
 # create a logger
 logger = utils.get_logger()
-logger.info('amrap-wod-generator started')
+logger.info('pls-inspire-me-now started')
 
 # parse quotes from included file quotes.txt
 quotes_file_name = 'quotes.txt'

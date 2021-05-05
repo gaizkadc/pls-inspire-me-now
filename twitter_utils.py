@@ -1,8 +1,5 @@
 import tweepy
 import os
-import locale
-import datetime
-import random
 
 
 def get_twitter_credentials(logger):
@@ -62,3 +59,31 @@ def tweet_quote(img_path, quote, logger):
     logger.info('quote img: ' + img_path)
 
     logger.info('quote tweeted')
+
+
+# Search for relevant tweets
+def search_tweets(search_terms, api, my_id, logger):
+    logger.info('searching for inspirational tweets')
+
+    relevant_tweets = []
+    number_of_tweets = 10
+    for term in search_terms:
+        for tweet in tweepy.Cursor(api.search, term).items(number_of_tweets):
+            if tweet.user.id != my_id and not hasattr(tweet, 'retweeted_status'):
+                relevant_tweets.append(tweet)
+
+    return relevant_tweets
+
+
+# Like tweets
+def like_tweets(tweets, logger):
+    logger.info('liking tweets')
+
+    for tweet in tweets:
+        try:
+            tweet.favorite()
+            logger.info(tweet.text)
+        except tweepy.TweepError as e:
+            print(e.reason)
+        except StopIteration:
+          break

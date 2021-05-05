@@ -28,6 +28,7 @@ Eat healthy.
 Exercise.
 Spit on the floor.
 Lift weights.
+Don't lift weights.
 Eat fruit and vegetables.
 Eat ass.
 Be intense.
@@ -191,3 +192,19 @@ Buy a house.
 Don’t buy a house.
 Follow this account.
 Don’t follow this account.
+Feel.
+Don't feel.
+Vote.
+Don't vote.
+Excuse yourself.
+Don't excuse yourself.
+Help others.
+Don't help others.
+Masturbate.
+Don’t masturbate.
+Do CrossFit.
+Don't do CrossFit.
+Do Calisthenics.
+Don't do Calisthenics.
+Listen to Mercyful Fate.
+Don't listen to Mercyful Fate.
